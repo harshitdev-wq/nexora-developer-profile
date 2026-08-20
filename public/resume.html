@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume — Nexora</title>
+    <meta
+      name="description"
+      content="One-page resume of Nexora — BCA ’26 student developer: projects, skills and education. Print-friendly."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Sora:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #111114;
+        --dim: rgba(0, 0, 0, 0.62);
+        --faint: rgba(0, 0, 0, 0.42);
+        --line: rgba(0, 0, 0, 0.12);
+        --paper: #ffffff;
+        --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+        --sans: "Sora", "Helvetica Neue", Arial, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #ececee;
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 14px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      .toolbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 20px;
+        background: rgba(10, 10, 12, 0.92);
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+      }
+      .toolbar a { color: rgba(255, 255, 255, 0.75); text-decoration: none; padding: 8px 4px; }
+      .toolbar a:hover { color: #fff; }
+      .toolbar button {
+        font: inherit;
+        letter-spacing: 0.1em;
+        color: #0a0a0c;
+        background: #fff;
+        border: 0;
+        border-radius: 8px;
+        padding: 9px 18px;
+        cursor: pointer;
+      }
+      .toolbar button:hover { opacity: 0.88; }
+      .sheet {
+        max-width: 780px;
+        margin: 32px auto 64px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: clamp(28px, 6vw, 56px);
+      }
+      header.page-head { border-bottom: 1px solid var(--line); padding-bottom: 22px; }
+      .kicker {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--faint);
+        margin: 0 0 10px;
+      }
+      h1 { font-size: clamp(30px, 6vw, 44px); font-weight: 200; letter-spacing: 0.02em; margin: 0 0 6px; }
+      .role { font-family: var(--mono); font-size: 12.5px; color: var(--dim); margin: 0 0 14px; }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 18px;
+        font-family: var(--mono);
+        font-size: 11.5px;
+        color: var(--dim);
+        margin: 0;
+      }
+      .meta a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+      section { padding-block: 20px; border-bottom: 1px solid var(--line); }
+      section:last-child { border-bottom: 0; }
+      h2 {
+        font-family: var(--mono);
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--faint);
+        margin: 0 0 14px;
+      }
+      p { margin: 0; color: var(--dim); }
+      .item { margin-bottom: 16px; }
+      .item:last-child { margin-bottom: 0; }
+      .item h3 { margin: 0 0 2px; font-size: 15px; font-weight: 500; }
+      .item .sub { font-family: var(--mono); font-size: 11px; color: var(--faint); margin: 0 0 6px; }
+      ul.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 0; padding: 0; list-style: none; }
+      ul.tags li {
+        font-family: var(--mono);
+        font-size: 10.5px;
+        letter-spacing: 0.04em;
+        padding: 3px 9px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--dim);
+      }
+      ul.plain { margin: 0; padding-left: 18px; color: var(--dim); }
+      ul.plain li { margin-bottom: 4px; }
+      .cols { display: grid; gap: 20px; }
+      @media (min-width: 620px) { .cols { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 560px) {
+        body { background: var(--paper); }
+        .sheet { margin: 0; border: 0; border-radius: 0; }
+      }
+      @media print {
+        body { background: #fff; font-size: 12px; }
+        .toolbar { display: none !important; }
+        .sheet { margin: 0; max-width: none; border: 0; border-radius: 0; padding: 0; }
+        section { break-inside: avoid; padding-block: 14px; }
+        a { color: var(--ink); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <a href="/" aria-label="Back to profile">← back to profile</a>
+      <button type="button" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+
+    <main class="sheet">
+      <header class="page-head">
+        <p class="kicker">Resume · Junction profile</p>
+        <h1>Nexora</h1>
+        <p class="role">Student developer — web platforms &amp; systems · BCA ’26</p>
+        <p class="meta">
+          <span>Jaipur, India · UTC +5:30</span>
+          <a href="mailto:hello@nexora.dev">hello@nexora.dev</a>
+          <a href="https://github.com/nexora-dev">github.com/nexora-dev</a>
+          <span>junction.cc/nexora</span>
+        </p>
+      </header>
+
+      <section aria-labelledby="r-summary">
+        <h2 id="r-summary">Summary</h2>
+        <p>
+          Third-year BCA student who ships small, honest software — campus tools classmates
+          actually use, terminal utilities, and a physically-based ray tracer. Comfortable across
+          the seam of product and systems: interface in the morning, query planner after lunch.
+          Looking for a summer 2026 internship.
+        </p>
+      </section>
+
+      <section aria-labelledby="r-projects">
+        <h2 id="r-projects">Selected projects</h2>
+
+        <div class="item">
+          <h3>campusly — campus community platform</h3>
+          <p class="sub">React · TypeScript · Node.js · MongoDB · live, 40+ events/semester</p>
+          <ul class="plain">
+            <li>Event boards, notes exchange and moderated Q&amp;A for BCA clubs.</li>
+            <li>Keeps a 1&nbsp;GB VPS under 200&nbsp;ms p95 with query-level caching.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>sightline — face-ID attendance</h3>
+          <p class="sub">Python · OpenCV · Flask · deployed in department labs</p>
+          <ul class="plain">
+            <li>Recognition pipeline with liveness check and one-click CSV exports.</li>
+            <li>Cut lab roll-call from six minutes to roughly forty seconds.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>pathray — physically-based ray tracer</h3>
+          <p class="sub">C++17 · CMake · from-scratch renderer</p>
+          <ul class="plain">
+            <li>Sphere/quad scenes, BVH acceleration, PPM output — no engine code.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>pyvault &amp; ferroctl — CLI tooling</h3>
+          <p class="sub">Python · SQLite · Go · Bubble Tea</p>
+          <ul class="plain">
+            <li>Offline AES-256 password vault with TOTP support.</li>
+            <li>Terminal UI that tails logs and restarts services across SSH hosts.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="r-skills">
+        <h2 id="r-skills">Skills</h2>
+        <div class="cols">
+          <div>
+            <div class="item">
+              <h3>Languages</h3>
+              <ul class="tags">
+                <li>TypeScript</li><li>JavaScript</li><li>Python</li><li>C</li><li>C++</li><li>SQL</li>
+              </ul>
+            </div>
+            <div class="item" style="margin-top: 14px;">
+              <h3>Frontend</h3>
+              <ul class="tags">
+                <li>React</li><li>Vite</li><li>HTML</li><li>CSS</li><li>Accessibility</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="item">
+              <h3>Backend &amp; data</h3>
+              <ul class="tags">
+                <li>Node.js</li><li>Express</li><li>Flask</li><li>REST</li><li>MongoDB</li><li>PostgreSQL</li>
+              </ul>
+            </div>
+            <div class="item" style="margin-top: 14px;">
+              <h3>Toolbox</h3>
+              <ul class="tags">
+                <li>Git</li><li>Linux</li><li>Docker</li><li>GitHub Actions</li><li>Figma</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="r-education">
+        <h2 id="r-education">Education &amp; activity</h2>
+        <div class="item">
+          <h3>Bachelor of Computer Applications (BCA)</h3>
+          <p class="sub">2023 — 2026 · Jaipur</p>
+          <ul class="plain">
+            <li>Focus: data structures, DBMS, operating systems, computer networks.</li>
+            <li>Leads the campus dev-club — weekly build-nights, 30+ regulars.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="r-links">
+        <h2 id="r-links">References</h2>
+        <p class="meta">
+          <a href="https://github.com/nexora-dev">GitHub — @nexora-dev</a>
+          <a href="https://www.linkedin.com/in/nexora-dev">LinkedIn — in/nexora-dev</a>
+          <a href="https://nexora.dev">Portfolio — nexora.dev</a>
+          <a href="mailto:hello@nexora.dev">hello@nexora.dev</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

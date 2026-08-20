@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Nexora — Junction · Developer identity in one link</title>
+    <meta
+      name="description"
+      content="Nexora's public Junction profile — a single link connecting projects, resume, socials and contact. Fast, minimal, developer-first."
+    />
+    <meta name="theme-color" content="#070708" />
+    <meta property="og:title" content="Nexora — Junction" />
+    <meta
+      property="og:description"
+      content="Every project, link and way to reach Nexora — in one place."
+    />
+    <meta property="og:type" content="profile" />
+    <meta
+      property="og:image"
+      content="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260806_132328_5f9029c8-218f-4489-82b6-29ff2849920e.png"
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://d8j0ntlcm91z4.cloudfront.net" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Sora:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      // Apply saved theme before first paint (dark-first product).
+      (function () {
+        var theme = "dark";
+        try {
+          var stored = window.localStorage.getItem("junction-theme");
+          if (stored === "light" || stored === "dark") theme = stored;
+        } catch (e) {}
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.classList.add("js");
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <noscript>
+      <div
+        style="max-width:640px;margin:0 auto;padding:48px 24px;font-family:'Sora',sans-serif;color:#f4f4f5;background:#070708;min-height:100vh;"
+      >
+        <p
+          style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 16px;"
+        >
+          Junction · Public profile
+        </p>
+        <h1 style="font-size:40px;font-weight:300;letter-spacing:.02em;margin:0 0 8px;">Nexora</h1>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:13px;color:rgba(255,255,255,.55);margin:0 0 24px;">
+          @nexora · Jaipur, India · Open to internships
+        </p>
+        <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.75);margin:0 0 32px;">
+          BCA student building fast, honest software — from CPU ray tracers to campus-scale web apps.
+          Find my work on GitHub (github.com/nexora-dev) or write to
+          <a href="mailto:hello@nexora.dev" style="color:#fff;">hello@nexora.dev</a>.
+        </p>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(255,255,255,.4);">
+          Enable JavaScript for the full interactive profile, project filtering and theme switching.
+        </p>
+      </div>
+    </noscript>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
