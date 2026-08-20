@@ -9,7 +9,7 @@ import {
   Wrench,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { GithubIcon, LinkedinIcon, XIcon } from "./icons";
+import { GithubIcon, LinkedinIcon } from "./icons";
 
 export type AnyIcon = LucideIcon | typeof GithubIcon;
 
@@ -18,17 +18,17 @@ export type AnyIcon = LucideIcon | typeof GithubIcon;
 /* ------------------------------------------------------------------ */
 
 export const PROFILE = {
-  name: "Nexora",
-  handle: "@nexora",
-  shortUrl: "junction.cc/nexora",
-  role: "Student developer · Web & systems",
-  bio: "BCA ’26 student building fast, honest software — from CPU ray tracers to campus-scale web apps. I care about clean APIs, sharp interfaces, and code that reads like prose.",
-  location: "Jaipur, India",
-  status: "Open to internships · Summer 2026",
-  email: "hello@nexora.dev",
+  name: "Harshit Singh",
+  handle: "@harshitdev-wq",
+  shortUrl: "nexoradevweb.netlify.app",
+  role: "BCA student · Developer in progress",
+  bio: "BCA student building responsive web experiences while going deeper into Python, C++, Git, and real-world software projects. I like clean interfaces, practical tools, and learning by shipping.",
+  location: "Maharashtra, India",
+  status: "Open to internships · Building in public",
+  email: "harshit23228822@gmail.com",
   resumePath: "/resume.html",
   avatar: "/assets/images/avatar.jpg",
-  avatarAlt: "Abstract glass “N” identity mark used as Nexora’s avatar",
+  avatarAlt: "Nexora identity mark",
 } as const;
 
 /* ------------------------------------------------------------------ */
@@ -40,46 +40,34 @@ export interface Social {
   handle: string;
   href: string;
   icon: AnyIcon;
-  copy?: string; // when present, a copy affordance is rendered
+  copy?: string;
 }
 
 export const SOCIALS: Social[] = [
   {
     label: "GitHub",
-    handle: "@nexora-dev",
-    href: "https://github.com/nexora-dev",
+    handle: "@harshitdev-wq",
+    href: "https://github.com/harshitdev-wq",
     icon: GithubIcon,
   },
   {
     label: "LinkedIn",
-    handle: "in/nexora-dev",
-    href: "https://www.linkedin.com/in/nexora-dev",
+    handle: "in/harshit-singh",
+    href: "https://www.linkedin.com/in/harshit-singh-870642422",
     icon: LinkedinIcon,
   },
   {
     label: "Portfolio",
-    handle: "nexora.dev",
-    href: "https://nexora.dev",
+    handle: "nexoradevweb.netlify.app",
+    href: "https://nexoradevweb.netlify.app/",
     icon: Globe,
   },
   {
-    label: "X / Twitter",
-    handle: "@nexoradev",
-    href: "https://x.com/nexoradev",
-    icon: XIcon,
-  },
-  {
-    label: "LeetCode",
-    handle: "@nexora_dev",
-    href: "https://leetcode.com/nexora_dev",
-    icon: Code2,
-  },
-  {
     label: "Email",
-    handle: "hello@nexora.dev",
-    href: "mailto:hello@nexora.dev",
+    handle: "harshit23228822@gmail.com",
+    href: "mailto:harshit23228822@gmail.com",
     icon: Mail,
-    copy: "hello@nexora.dev",
+    copy: "harshit23228822@gmail.com",
   },
 ];
 
@@ -104,82 +92,56 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    id: "campusly",
-    name: "campusly",
-    tagline: "Campus community platform",
+    id: "nexora",
+    name: "nexora",
+    tagline: "Developer identity platform",
     description:
-      "Event boards, notes exchange and moderated Q&A for BCA clubs. Handles 40+ events a semester on a tiny VPS without breaking a sweat.",
-    stack: ["React", "TypeScript", "Node.js", "MongoDB"],
+      "A responsive developer profile experience that brings projects, skills, social links, contact details, and a live portfolio together in one interface.",
+    stack: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     category: "web",
-    repo: "https://github.com/nexora-dev/campusly",
-    demo: "https://campusly-nexora.vercel.app",
-    image: "/assets/images/cover-campusly.jpg",
-    imageAlt: "Minimal line-art network of connected campus nodes on black",
-  },
-  {
-    id: "devdot",
-    name: "devdot",
-    tagline: "The profile engine behind this page",
-    description:
-      "A link-in-bio generator with theme tokens, markdown bios and zero-tracking analytics. Dogfooded daily — this profile runs on it.",
-    stack: ["Vite", "React", "CSS"],
-    category: "web",
-    repo: "https://github.com/nexora-dev/devdot",
-    demo: "https://devdot-nexora.vercel.app",
+    repo: "https://github.com/harshitdev-wq/nexora-developer-profile",
+    demo: "https://nexoradevweb.netlify.app/",
     image: "/assets/images/cover-devdot.jpg",
-    imageAlt: "Thin line-art chain of linked profile cards on black",
+    imageAlt: "Abstract dark artwork representing a connected developer profile",
   },
   {
-    id: "pyvault",
-    name: "pyvault",
-    tagline: "Offline-first CLI password vault",
+    id: "boomerang",
+    name: "Boomerang Real Estate",
+    tagline: "Real-estate web experience",
     description:
-      "AES-256 encrypted store with TOTP codes and master-key stretching. Everything stays on disk, everything stays yours.",
-    stack: ["Python", "SQLite", "cryptography"],
-    category: "python",
-    repo: "https://github.com/nexora-dev/pyvault",
-    demo: "https://github.com/nexora-dev/pyvault#readme",
-    image: "/assets/images/cover-pyvault.jpg",
-    imageAlt: "Concentric line-art key etched in white on black",
+      "A polished property-focused website project built to practice responsive layouts, visual hierarchy, navigation, and modern frontend presentation.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    category: "web",
+    repo: "https://github.com/harshitdev-wq/Boomerang-Real-Estate-Website",
+    demo: "https://github.com/harshitdev-wq/Boomerang-Real-Estate-Website",
+    image: "/assets/images/cover-campusly.jpg",
+    imageAlt: "Abstract dark artwork representing a property website",
   },
   {
-    id: "sightline",
-    name: "sightline",
-    tagline: "Face-ID attendance for classrooms",
+    id: "dentist-clinic",
+    name: "Dentist Clinic Website",
+    tagline: "Responsive clinic website",
     description:
-      "OpenCV pipeline with a liveness check and one-click CSV exports. Cut our lab’s roll-call from six minutes to forty seconds.",
-    stack: ["Python", "OpenCV", "Flask"],
-    category: "python",
-    repo: "https://github.com/nexora-dev/sightline",
-    demo: "https://github.com/nexora-dev/sightline#readme",
+      "A frontend project focused on clear information architecture, responsive sections, service presentation, and a professional visual system.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    category: "web",
+    repo: "https://github.com/harshitdev-wq/dentist-clinic-website",
+    demo: "https://github.com/harshitdev-wq/dentist-clinic-website",
     image: "/assets/images/cover-sightline.jpg",
-    imageAlt: "Facial landmark mesh of dots and lines fading into black",
+    imageAlt: "Abstract dark artwork representing a healthcare website",
   },
   {
-    id: "pathray",
-    name: "pathray",
-    tagline: "A tiny physically-based ray tracer",
+    id: "restaurant",
+    name: "Modern Restaurant Website",
+    tagline: "Modern hospitality interface",
     description:
-      "Sphere and quad scenes, BVH acceleration, PPM out. Written to finally understand the math I kept copy-pasting from tutorials.",
-    stack: ["C++17", "CMake"],
-    category: "cpp",
-    repo: "https://github.com/nexora-dev/pathray",
-    demo: "https://github.com/nexora-dev/pathray#readme",
+      "A responsive restaurant experience designed around strong visual hierarchy, menu presentation, navigation, and mobile-friendly layouts.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    category: "web",
+    repo: "https://github.com/harshitdev-wq/modern-restaurant-website",
+    demo: "https://github.com/harshitdev-wq/modern-restaurant-website",
     image: "/assets/images/cover-pathray.jpg",
-    imageAlt: "Contour-ring sphere lit by thin light rays on black",
-  },
-  {
-    id: "ferroctl",
-    name: "ferroctl",
-    tagline: "Fleet ops in the terminal",
-    description:
-      "A TUI that tails logs and restarts services across SSH hosts. Built after one too many nights of juggling tmux panes.",
-    stack: ["Go", "Bubble Tea", "SSH"],
-    category: "other",
-    repo: "https://github.com/nexora-dev/ferroctl",
-    demo: "https://github.com/nexora-dev/ferroctl#readme",
-    image: "/assets/images/cover-ferroctl.jpg",
-    imageAlt: "Outlined terminal window with a glowing cursor on black",
+    imageAlt: "Abstract dark artwork representing a modern restaurant interface",
   },
 ];
 
@@ -206,26 +168,26 @@ export const SKILLS: SkillGroup[] = [
   {
     title: "Languages",
     icon: Terminal,
-    note: "comfort-first: typed where it counts",
-    items: ["TypeScript", "JavaScript", "Python", "C", "C++", "SQL"],
+    note: "building the fundamentals",
+    items: ["Python", "C", "C++", "JavaScript", "HTML", "CSS"],
   },
   {
     title: "Frontend",
     icon: Boxes,
     note: "interfaces that stay out of the way",
-    items: ["React", "Vite", "Tailwind CSS", "HTML", "CSS", "Accessibility"],
+    items: ["React", "Vite", "Tailwind CSS", "Responsive UI", "Accessibility"],
   },
   {
-    title: "Backend & data",
+    title: "Data & APIs",
     icon: Cpu,
-    note: "small services, honest queries",
-    items: ["Node.js", "Express", "Flask", "REST", "MongoDB", "PostgreSQL"],
+    note: "learning practical software foundations",
+    items: ["SQL", "REST APIs", "GitHub", "JSON"],
   },
   {
     title: "Toolbox",
     icon: Wrench,
-    note: "the daily drivers",
-    items: ["Git", "Linux", "Docker", "Figma", "GitHub Actions", "VS Code"],
+    note: "daily development tools",
+    items: ["Git", "Linux", "VS Code", "Figma", "Netlify"],
   },
 ];
 
@@ -234,10 +196,10 @@ export const SKILLS: SkillGroup[] = [
 /* ------------------------------------------------------------------ */
 
 export const STATS = [
-  { value: "6", label: "Projects shipped", hint: "all maintained, none abandoned" },
-  { value: "22", label: "Public repositories", hint: "github.com/nexora-dev" },
-  { value: "480+", label: "Contributions this year", hint: "code, reviews and docs" },
-  { value: "3 yrs", label: "Writing code", hint: "self-taught, BCA since ’23" },
+  { value: "4", label: "Public projects", hint: "built and published" },
+  { value: "1", label: "Flagship build", hint: "Nexora developer profile" },
+  { value: "2026", label: "BCA journey", hint: "learning by shipping" },
+  { value: "∞", label: "Things left to learn", hint: "and that's the point" },
 ] as const;
 
 /* ------------------------------------------------------------------ */
