@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "A modern digital identity platform for developers.",
+  "homepage": "https://nexoradevweb.netlify.app/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
